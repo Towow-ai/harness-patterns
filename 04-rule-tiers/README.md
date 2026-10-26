@@ -41,4 +41,4 @@
 4. 在 `.claude/skills/tier-test/SKILL.md` 写一行“红线：不许跳过测试直接发版。”，跑 `scripts/check-tiers.sh`：报“红线在按需档”，退出码 1。删掉这个文件再跑，报“没有发现问题”。
 5. 想看 hook 坏了会怎样：`chmod -x .claude/hooks/append-only.sh`，再做第 1 步，提示里有 `blocking because onFailure is "block"`，这时新建文件也会被拦；做完 `chmod +x` 改回来。
 
-这五步我们都跑过，另外跑了不设 `onFailure` 的对照（坏脚本时改动照样落下）、按路径规则的三种加载情况，第 3 步还试了 Bash `cat .env` 和用写文件的工具整个覆盖，都被挡下。没贴的还有：拦住 Bash 和 Python 脚本改文件的办法（要开沙箱，或者用操作系统一级的权限）。
+这五步我们都跑过，另外跑了不设 `onFailure` 的对照（坏脚本时改动照样落下）、按路径规则的三种加载情况，第 3 步还试了 Bash `cat .env` 和用写文件的工具整个覆盖，都被挡下。这个目录也没放的：拦住 Bash 和 Python 脚本改文件的办法（要开沙箱，或者用操作系统一级的权限）。

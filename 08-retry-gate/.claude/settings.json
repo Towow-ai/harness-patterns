@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "deny": ["Bash(*retry_reset*)"]
+  },
+  "hooks": {
+    "PreToolUse": [{
+      "matcher": "Agent|SendMessage",
+      "hooks": [{
+        "type": "command",
+        "command":
+          "\"$CLAUDE_PROJECT_DIR\"/scripts/retry_gate.py"
+      }]
+    }],
+    "SubagentStop": [{
+      "hooks": [{
+        "type": "command",
+        "command":
+          "\"$CLAUDE_PROJECT_DIR\"/scripts/record_run.py"
+      }]
+    }]
+  }
+}
