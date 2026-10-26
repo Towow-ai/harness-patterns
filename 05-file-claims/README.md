@@ -14,7 +14,7 @@ echo '# drill' > README.md
 git add README.md && git commit -m init
 ```
 
-第 2 步：把本目录的五个文件照路径放进 `~/drill`，加执行权限，让 git 忽略 worktree 所在的目录，提交。worktree 从主干开出来，hook 和脚本得先在主干上，每个 worktree 里才有。
+第 2 步：把本目录的五个文件照路径放进 `~/drill`（本目录的 README.md 是说明，不要拷），加执行权限，让 git 忽略 worktree 所在的目录，提交。worktree 从主干开出来，hook 和脚本得先在主干上，每个 worktree 里才有。
 
 ```bash
 chmod +x .claude/hooks/claims.sh
