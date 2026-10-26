@@ -1,6 +1,6 @@
 # 第 3 期：给删除上两道锁
 
-文章：公众号“Harness 模式”第 3 期《hook 拦得住 rm -rf，拦不住 Agent 写的 Python 删除：给删除上两道锁（附配置）》（北京 11-03 发出后补链接）。为什么这样设计、实测里每一步看到了什么，都在文章里。下面是这一期配置的完整说明，文章附录是它的压缩版。
+文章：公众号“Harness 模式”第 3 期《hook 拦得住 rm -rf，拦不住 Agent 写的 Python 删除：给删除上两道锁（附配置）》，北京时间 11 月 3 日发出。为什么这样设计、实测里每一步看到了什么，都在文章里。下面是这一期配置的完整说明，文章附录是它的压缩版。
 
 这是最小可跑版，完整做法见文章第三至六节。第一次照下面的步骤，在新建的小仓库里拿假文件试；试通了，再改 `PROTECTED` 和 deny 里的名字。四份文件各管一段：`.claude/settings.json` 打开 sandbox、把 `records` 写进 deny、挂上 hook；`.claude/hooks/guard.sh` 是拦 git 回滚的 hook；`tools/guarded.py` 是删除函数，代码里 import `guarded_rmtree`，shell 里直接跑这个文件；`CLAUDE.md` 是三条删除规矩。另在 `records/` 里建一个空文件 `.do-not-delete`。
 
