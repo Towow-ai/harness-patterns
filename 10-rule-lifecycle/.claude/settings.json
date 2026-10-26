@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(*--approve*)",
+      "Bash(*rules-reviewed*)",
+      "Bash(*--no-verify*)"
+    ]
+  }
+}

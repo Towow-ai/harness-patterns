@@ -1,0 +1,4 @@
+# 基线：升 enforce 那天已经在的存量，enforce 时不挡。
+# 一行一条：规则名<Tab>文件<Tab>那一行的代码。
+# 由 python3 checks/run.py --baseline 规则名 写入；只许删，
+# 多出来的条目提交时要人看过。

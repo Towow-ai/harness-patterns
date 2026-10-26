@@ -1,0 +1,13 @@
+#!/bin/sh
+# 提交前先和人审过的版本比，再按各自的 stage 跑检查规则。
+# 哪一步失败，包括脚本自己出错，都挡下这次提交。
+# anchor.py 先拿自己和人审过的那份逐字节比：它被改过，
+# 它说"没改松"就不能信，所以这一步不经过它。
+t=rules-reviewed
+a=checks/anchor.py
+if git rev-parse -q --verify $t >/dev/null &&
+   ! git show $t:$a | cmp -s - $a; then
+  echo "$a 和人审过的版本不一样"
+  exit 1
+fi
+python3 checks/anchor.py && python3 checks/run.py
