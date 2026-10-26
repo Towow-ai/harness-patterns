@@ -6,7 +6,7 @@ Minimal, tested Claude Code configurations from *Harness 模式* (Harness Patter
 
 | 期 | 目录 | 讲什么 | 文章 |
 |---|---|---|---|
-| 第 1 期 | [01-independent-verifier](01-independent-verifier/) | 写代码的 Agent 不给自己验收：只读的验收 Agent 判完成，收工和推送前都查它的结论 | [链接](https://mp.weixin.qq.com/s/lYN7NwXgA_UvdjA-iXnyiw) |
+| 第 1 期 | [01-independent-verifier](01-independent-verifier/) | 写代码的 Agent 不给自己验收：只读的验收 Agent 判完成，收工和推送前都查它的结论 | [第 1 期文章](https://mp.weixin.qq.com/s/lYN7NwXgA_UvdjA-iXnyiw) |
 
 每发一期，这里加一个目录。
 
