@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "deny": ["Read(./.env)", "Edit(./.env)"]
+  },
+  "hooks": {
+    "PreToolUse": [{
+      "matcher": "Edit|Write",
+      "hooks": [{
+        "type": "command",
+        "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/append-only.sh",
+        "onFailure": "block"
+      }]
+    }],
+    "InstructionsLoaded": [{
+      "hooks": [{
+        "type": "command",
+        "command": "{ cat; echo; } >> \"$CLAUDE_PROJECT_DIR\"/.claude/loaded.log"
+      }]
+    }]
+  }
+}
