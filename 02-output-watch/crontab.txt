@@ -1,0 +1,9 @@
+# R 改成仓库的绝对路径，ALERT_CMD 换成你的通知方式；
+# 地址留在单引号里，不然地址里的 & 会把命令截断。
+# 两行在同一份 crontab 里：cron 整个停了，两个一起停。
+R=/path/to/repo
+ALERT_CMD=curl -fsS -m 10 -o /dev/null -d @- '你的webhook地址'
+# 机器人要 JSON 的（比如 Slack），上一行换成：
+# ALERT_CMD=jq -Rsc '{text: .}' | curl -fsS -m 10 -o /dev/null -H 'Content-Type: application/json' -d @- '你的webhook地址'
+*/30 * * * * "$R"/scripts/watch-output.sh
+*/10 * * * * "$R"/scripts/deadman.sh
