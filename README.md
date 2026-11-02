@@ -2,7 +2,7 @@
 
 Minimal, tested Claude Code configurations from *Harness 模式* (Harness Patterns), a Chinese-language WeChat series on agent harness patterns. Each folder holds every file of one issue's setup. Copy them (not the folder's README.md) into a git repository, follow the folder's README, then try to break it once on purpose and see what it stops and what it only flags.
 
-这里放公众号“Harness 模式”系列每期文章里那套最小可跑配置的全部文件，一期一个目录。为什么这样设计、实测里看到了什么，写在文章里；这里只放文件。每个目录的说明写了文件放哪、用之前要做哪几件事；怎么故意犯一次，第 1 到 7 期写在说明里，第 8 到 10 期写在那期文章里。目录里的 README.md 就是这份说明，不用拷进你的仓库。每期的文件都在那期写明的 Claude Code 版本上跑通过。
+这里放公众号“Harness 模式”系列每期文章里那套最小可跑配置的全部文件，一期一个目录。为什么这样设计、实测里看到了什么，写在文章里；这里只放文件。每个目录的说明写了文件放哪、用之前要做哪几件事；怎么故意犯一次，第 1 到 7 期写在说明里，第 8 到 10 期写在那期文章里，文章发出后可看。目录里的 README.md 就是这份说明，不用拷进你的仓库。每期的文件都在那期写明的 Claude Code 版本上跑通过。
 
 | 期 | 目录 | 讲什么 | 文章 |
 |---|---|---|---|
@@ -10,6 +10,6 @@ Minimal, tested Claude Code configurations from *Harness 模式* (Harness Patter
 | 第 2 期 | [02-output-watch](02-output-watch/) | 心跳只证明 Agent 活着：要盯产出，还要给巡检装死人开关 | [第 2 期文章](https://mp.weixin.qq.com/s/yyJZ3hBViLUOe2p4qsWR1w) |
 | 第 3 期 | [03-guarded-delete](03-guarded-delete/) | hook 拦得住 rm -rf，拦不住一行 Python：Agent 删东西，要认文件，不认命令 | 即将发布 |
 
-每发一期，这里加一个目录。
+第 1 到 10 期的目录都已放好；每发一期，这里加一行。
 
 许可：MIT，见 [LICENSE](LICENSE)。有问题或想合作：[联系我们](https://towow.net.cn/inquiry?r=gh-harness-patterns)。
