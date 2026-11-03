@@ -1,6 +1,6 @@
 # hook 拦住了 rm -rf，一行 Python 照样把目录删光：Agent 删东西，要认文件，不认命令
 
-文章：公众号《hook 拦住了 rm -rf，一行 Python 照样把目录删光：Agent 删东西，要认文件，不认命令》。为什么这样设计，都在文章里。下面是这一期配置的完整说明和实测记录。
+文章：公众号“Harness 模式”第 3 期[《hook 拦住了 rm -rf，一行 Python 照样把目录删光：Agent 删东西，要认文件，不认命令》](https://mp.weixin.qq.com/s/h9CRrskqcPzZHNwf4pGy6w)，北京时间 11 月 3 日发出。为什么这样设计，都在文章里。下面是这一期配置的完整说明和实测记录。
 
 这是最小可跑版。第一次照下面的步骤，在新建的小仓库里拿假文件试；试通了，再改 `PROTECTED` 和 deny 里的名字。四份文件各管一段：`.claude/settings.json` 打开 sandbox、把 `records` 写进 deny、挂上 hook；`.claude/hooks/guard.sh` 是拦 git 回滚的 hook；`tools/guarded.py` 是删除函数，代码里 import `guarded_rmtree`，shell 里直接跑这个文件；`CLAUDE.md` 是三条删除规矩。另在 `records/` 里建一个空文件 `.do-not-delete`。
 
