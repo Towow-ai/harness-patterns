@@ -1,6 +1,6 @@
 # 第 5 期：认领要改的文件
 
-文章：公众号《开了 worktree，多个 Claude Code 照样撞车：乐观锁搬过来，还要先报要改的文件》。为什么这样设计、实测里每一步看到了什么，都在文章里。下面是这套配置的完整说明。
+文章：公众号“Harness 模式”第 5 期[《开了 worktree，多个 Claude Code 照样撞车：乐观锁搬过来，还要先报要改的文件》](https://mp.weixin.qq.com/s?__biz=Mzk1NzYxNDczMQ==&mid=2247485424&idx=1&sn=1b6e097100e89449e900c47e70917e7b&chksm=c2ee03368ec96e43be7fd41f689ca498125b80d1b03a726ae9a90d0d09f6f2028ebe0c087974)，北京时间 11 月 6 日发出。为什么这样设计、实测里每一步看到了什么，都在文章里。下面是这套配置的完整说明。
 
 这是最小可跑版，完整做法见文章第四至六节。第一次先照“故意犯一次”在 `~/drill` 里走一遍；都对了，再照“装进真仓库”装。五份文件各管一段：`.claude/settings.json` 把 hook 挂在编辑和写文件的工具上；`.claude/hooks/claims.sh` 是那道 hook；`scripts/claim.sh` 开 worktree、写认领；`scripts/land.sh` 核四样、快进合并；`CLAUDE.md` 是给 Agent 的四条规矩。
 
